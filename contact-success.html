@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi thành công - Ebook World</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .success-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .success-box {
+            background: #1a1a1a;
+            border: 2px solid orange;
+            border-radius: 10px;
+            padding: 50px;
+            max-width: 600px;
+            box-shadow: 0 4px 20px rgba(255, 165, 0, 0.2);
+        }
+
+        .success-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .success-box h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: orange;
+        }
+
+        .success-box p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        .info-box {
+            background: #222;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .info-box p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .info-box strong {
+            color: orange;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: orange;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn-back:hover {
+            background-color: #ff8c00;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="labTH.html">Labs</a>
+    </nav>
+
+    <div class="success-container">
+        <div class="success-box">
+            <div class="success-icon">✓</div>
+            <h1>Gửi thành công!</h1>
+            <p>Cảm ơn bạn đã liên hệ với mình.</p>
+            <p>Mình sẽ cố gắng phản hồi lại sớm nhất có thể nha ^_^</p>
+
+            <div class="info-box" id="infoBox">
+            
+            </div>
+
+            <a href="index.html#contact" class="btn-back">← Quay lại trang chính</a>
+        </div>
+    </div>
+
+    <script>
+        const contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+        if (contacts.length > 0) {
+            const lastContact = contacts[contacts.length - 1];
+            const infoBox = document.getElementById('infoBox');
+            infoBox.innerHTML = `
+                <p><strong>Tên:</strong> ${lastContact.name}</p>
+                <p><strong>Email:</strong> ${lastContact.email}</p>
+                <p><strong>Số điện thoại:</strong> ${lastContact.phone || lastContact.address || ''}</p>
+                <p><strong>Tin nhắn:</strong> ${lastContact.message}</p>
+                <p><strong>Thời gian gửi:</strong> ${lastContact.timestamp}</p>
+            `;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - Ebook World</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            color: #000;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-box {
+            background: #fff;
+            border: 2px solid #d0d0d0;
+            border-radius: 20px;
+            padding: 45px 55px;
+            max-width: 620px;
+            width: 140%;
+            box-shadow: 
+                0 12px 35px rgba(0, 0, 0, 0.10),
+                0 5px 12px rgba(0, 0, 0, 0.06);
+            position: relative;
+            z-index: 10;
+        }
+
+        .form-box h1 {
+            font-size: 30px;
+            white-space: nowrap;
+            text-align: center;
+            margin-bottom: 35px;
+            color: #2c3e50;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        
+        .form-box h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #3498db, #2c3e50);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        #contactForm {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            width: 180%;
+        }
+ 
+
+        #contactForm input,
+        #contactForm textarea {
+            width: 180%;
+            padding: 14px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            background-color: #fafbfc;
+            color: #2c3e50;
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        #contactForm input::placeholder,
+        #contactForm textarea::placeholder {
+            color: #555;
+            font-weight: bold;
+        }
+
+        #contactForm input:focus,
+        #contactForm textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            background-color: #fff;
+        }
+
+        #contactForm textarea {
+            resize: vertical;
+            min-height: 120px;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-buttons {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+            width: 180%;
+        }
+
+        .btn-submit,
+        .btn-cancel {
+            width: 180px;
+            padding: 14px 0;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            flex-shrink: 0;
+            
+            
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: #fff;
+        }
+
+        .btn-cancel {
+            margin-left: auto;
+            background: #ecf0f1;
+            color: #2c3e50;
+            border-color: #d0d0d0;
+        }
+
+       @media only screen and (max-width: 768px) {
+
+        .form-box {
+            width: 95%;
+            padding: 30px 20px;
+        }
+
+        .form-box h1 {
+            font-size: 32px;
+            white-space: normal;
+            text-align: center;
+        }
+
+        #contactForm {
+            width: 100%;
+        }
+
+        #contactForm input,
+        #contactForm textarea {
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .form-buttons {
+            width: 100%;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn-submit,
+        .btn-cancel {
+            width: 100%;
+        }
+
+        .navbar a {
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="labTH.html">Labs</a>
+    </nav>
+
+    <div class="form-container">
+        <div class="form-box">
+            <h1>Liên hệ với chúng tôi</h1>
+            <form id="contactForm" onsubmit="submitContact(event)">
+                <input type="text" placeholder="Tên của bạn" id="name" required>
+                <input type="text" placeholder="Số điện thoại" id="phone" required>
+                <input type="email" placeholder="Email" id="email" required>
+                <textarea placeholder="Nhập lời nhắn muốn gửi..." id="message" rows="5" required></textarea>
+                <div class="form-buttons">
+                    <button type="submit" class="btn-submit">Gửi</button>
+                    <button type="button" class="btn-cancel" onclick="goBack()">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+    
+</body>
+
+</html>

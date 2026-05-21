@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Chi tiết</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="index.html" class="back-btn">⬅ Quay về</a>
+<h1 style="text-align:center;">Giới thiệu chi tiết sản phẩm</h1>
+<div id="detail" style="text-align:center;"></div>
+
+<script>
+let p = localStorage.getItem("product");
+
+let data = {
+    kobo: {
+        name: "Kobo Clara HD",
+        desc: "Kobo Clara HD là một mẫu máy đọc sách phổ biến của Rakuten Kobo, ra mắt vào năm 2018, hướng đến người dùng muốn một thiết bị nhỏ gọn, giá hợp lý nhưng vẫn đảm bảo trải nghiệm đọc chất lượng cao.Thiết bị được trang bị màn hình E-Ink Carta 6 inch, độ phân giải 300 ppi, giúp hiển thị chữ sắc nét như giấy thật và giảm mỏi mắt khi đọc lâu. Nhờ lớp phủ chống chói, người dùng có thể đọc tốt cả ngoài trời dưới ánh nắng mạnh.Một điểm nổi bật của Kobo Clara HD là công nghệ ComfortLight PRO, cho phép điều chỉnh ánh sáng trắng và ánh sáng vàng, giúp giảm ánh sáng xanh và mang lại cảm giác dễ chịu khi đọc ban đêm.Máy có bộ nhớ 8GB, đủ để lưu trữ hàng nghìn cuốn sách, cùng với thời lượng pin kéo dài nhiều tuần chỉ sau một lần sạc. Ngoài ra, Kobo Clara HD hỗ trợ nhiều định dạng file như EPUB, PDF, MOBI…, giúp người dùng dễ dàng sử dụng tài liệu từ nhiều nguồn khác nhau.",
+        img:"./images/k2.png",
+        price: "2.800.000 VND"
+    },
+     kindle: {
+        name: "Kindle Paperwhite 6",
+        desc: "Kindle Paperwhite 6 (PPW6) là thế hệ mới của dòng máy đọc sách Kindle Paperwhite do Amazon phát triển, được nâng cấp về màn hình, tốc độ và trải nghiệm đọc so với các phiên bản trước. Đây là một trong những mẫu máy đọc sách phổ biến nhất hiện nay nhờ sự cân bằng giữa hiệu năng và giá thành.Thiết bị được trang bị màn hình E-Ink 7 inch, độ phân giải 300 ppi, giúp hiển thị chữ sắc nét như giấy thật và không gây mỏi mắt khi đọc lâu. Ngoài ra, máy còn hỗ trợ điều chỉnh ánh sáng vàng (warm light) để đọc ban đêm dễ chịu hơn.Kindle Paperwhite 6 có bộ nhớ 16GB hoặc 32GB, cho phép lưu trữ hàng nghìn cuốn sách, cùng với thời lượng pin lên đến khoảng 10–12 tuần chỉ với một lần sạc.Một điểm nổi bật khác là khả năng chống nước chuẩn IPX8,  giúp người dùng đọc sách ở nhiều môi trường như bãi biển hay hồ bơi mà không lo hư hỏng.",
+        img:"./images/p2.png",
+        price: "3.800.000 VND" 
+    },
+    boox: {
+        name: "BOOX Leaf 2",
+        desc: "BOOX Leaf 2 là một máy đọc sách cao cấp đến từ Onyx Boox, nổi bật với thiết kế mỏng nhẹ, màn hình lớn và đặc biệt là khả năng chạy hệ điều hành Android – mang lại trải nghiệm linh hoạt hơn so với Kindle hay Kobo. Thiết bị được trang bị màn hình E-Ink Carta 7 inch, độ phân giải 300 ppi, giúp hiển thị văn bản sắc nét, giống giấy thật và không gây mỏi mắt khi đọc lâu.Một điểm mạnh của BOOX Leaf 2 là chạy Android 11, cho phép người dùng cài đặt nhiều ứng dụng đọc sách như Kindle, Kobo Books, hoặc các app tiếng Việt như MEB, mở rộng khả năng sử dụng vượt xa máy đọc sách thông thường.Máy có cấu hình gồm chip Qualcomm 4 nhân, RAM 2GB và bộ nhớ 32GB, hỗ trợ thêm thẻ nhớ microSD để lưu trữ hàng nghìn tài liệu. Ngoài ra, thiết bị còn tích hợp Wi-Fi, Bluetooth và loa, giúp nghe audiobook hoặc kết nối tai nghe dễ dàng.Về thiết kế, BOOX Leaf 2 rất nhẹ (khoảng 170–185g) và có nút bấm chuyển trang vật lý, mang lại trải nghiệm đọc tiện lợi hơn khi cầm một tay",
+        img:"./images/b2.png",
+        price: "6.500.000 VND"
+    },
+};
+
+let d = data[p];
+
+if(d){
+    document.getElementById("detail").innerHTML = `
+        <h2>${d.name}</h2>
+
+        <img src="${d.img}" class="detail-img">
+        <p>${d.desc}</p>
+
+        <p class="price">
+            Giá tham khảo: <span>${d.price}</span>
+        </p>
+
+        
+    `;
+}else{
+    document.getElementById("detail").innerHTML = "<p>Không tìm thấy sản phẩm</p>";
+    
+}
+
+</script>
+
+</body>
+</html>
