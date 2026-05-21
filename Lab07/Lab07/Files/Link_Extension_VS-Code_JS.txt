@@ -1,0 +1,22 @@
+Javacript: Extension cho JS trong VS Code
+Link: https://topdev.vn/blog/vscode-extensions-cho-web-developer/
+	
+	#1. Javascript (ES6) Code Snippet
+		- Extension phổ biến nhất. Có thể kích hoạt từ các tập tin khác nhau.[.js, .ts, .jsx, .tsx, .html, .vue...]
+	#3. Prettier:
+		- Extension giúp định dạng code
+	#5. ESlint
+		- Tự động format lại code của bạn (khi save nếu bạn lựa chọn).
+	#6. Import Cost: 
+		- Kiểm soát kích cỡ các file import
+	#7. Path Intellisense: Gợi ý đường dẫn thông minh
+		- Tiện ích mở rộng này sẽ cung cấp cho bạn đường dẫn tham chiếu của tập tin bạn cần.
+	#8. View Node Package
+		- Cho phép bạn click vào require hoặc import line trong code của bạn và click thẳng đến GitHub repo.
+	#9. Better Comments: Extension giúp comment tốt hơn
+		|Đối với Alerts bạn sử dụng: // !
+		|Đối với Queries bạn sử dụng: // ?
+		|Đối với TODOs bạn sử dụng: // todo
+		|Đối với Highlights bạn sử dụng: // *
+	#10. NPM Intellisense: Gợi ý tên package bạn muốn import
+		- Gợi ý tên package khi bạn muốn import dựa trên các packages bạn đã cài đặt.

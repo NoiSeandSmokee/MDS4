@@ -1,0 +1,20 @@
+$mau-nen: red;
+$mau-menu: pink;
+/* MENU NGANG */
+.menu_ngang{
+    list-style: none;
+    background-color:$mau-nen;
+    padding: 0;
+    display: flex
+    li {
+        margin-left: 1px;
+        padding: 10px;
+        background-color: $mau-nen;
+    }
+    li:hover{
+        background-color: orange;
+        color: $mau-menu;
+        font-weight: bolder;
+        border-radius: 5px;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 24px;
+        }
+        h1 {
+            font-size: 48px;
+            text-align: center;
+        }
+        #userInfo {
+            text-align: center;
+            font-size: 28px;
+        }
+        p {
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        User Information
+    </h1>
+
+    <div id="userInfo">
+        <p>Name: Ngô Minh Hoàng</p>
+        <p>Age: 21</p>
+        <p>Email: ngominhhoang1815@gmail.com</p>
+        <p>Address: 180 Cao Lỗ phường Chánh Hưng TPHCM</p>
+    </div>
+
+    <script>
+        var userData = {
+        "name":"Ngô Minh Hoàng",
+        "age":"21",
+        "email":"ngominhhoang1815@gmail.com",
+        "address":"180 Cao Lỗ phường Chánh Hưng TPHCM"
+        }
+
+        function displayUserInfo(data) {
+            var userInfoElement = document.getElementById('userInfo');
+            userInfoElement.innerHTML = `
+            <p><strong>Name:</strong> ${data.name} </p>
+            <p><strong>Age:</strong> ${data.age} </p>
+            <p><strong>Email:</strong> ${data.email} </p>
+            <p><strong>Address:</strong> ${data.address} </p>
+            `
+        }
+        displayUserInfo(userData)
+    </script>
+</body>
+</html>

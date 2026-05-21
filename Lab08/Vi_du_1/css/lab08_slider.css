@@ -1,0 +1,42 @@
+#slider_container {
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.mySlides img {
+    width: 100%;
+    display: block;
+}
+
+.dot {
+    display: inline-block;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    background-color: #999;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #272727;
+}
+
+.next {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(49, 49, 49);
+    font-size: 40px;
+    position: absolute;
+    right: 0;
+    top: 45%;
+}
+
+.prev {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(49, 49, 49);
+    font-size: 40px;
+    position: absolute;
+    top: 45%;
+}

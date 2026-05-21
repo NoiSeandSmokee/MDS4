@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Lab05Bai_2</title>
+ <style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+background: #f5f5f5;
+}
+
+.wrapper {
+width: 1200px;
+margin: 20px auto;
+background: #fff;
+border: 2px solid #000;
+}
+
+/* topbar */
+.topbar {
+height: 40px;
+padding: 0 20px;
+border-bottom: 1px solid #ddd;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 14px;
+}
+
+/* header */
+.header {
+height: 90px;
+padding: 0 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+width: 120px;
+height: 60px;
+background: #f0c040;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+}
+
+.menu {
+display: flex;
+gap: 30px;
+}
+
+.menu a {
+text-decoration: none;
+color: #000;
+font-weight: bold;
+font-size: 14px;
+}
+
+.header-right {
+display: flex;
+flex-direction: column;
+gap: 8px;
+font-size: 14px;
+text-align: right;
+}
+
+/* main */
+.main {
+display: flex;
+padding: 20px;
+gap: 20px;
+}
+
+/* sidebar */
+.sidebar {
+width: 250px;
+}
+
+.sidebar-title {
+background: #111;
+color: #fff;
+padding: 12px 15px;
+font-weight: bold;
+margin-bottom: 15px;
+}
+
+.sidebar ul {
+list-style: none;
+}
+
+.sidebar ul li {
+padding: 10px 8px;
+border-bottom: 1px solid #ddd;
+}
+
+/* content */
+.content {
+flex: 1;
+}
+
+.toolbar {
+height: 50px;
+margin-bottom: 20px;
+display: flex;
+align-items: center;
+gap: 15px;
+}
+
+.toolbar input {
+flex: 1;
+height: 35px;
+padding: 0 10px;
+border: 1px solid #ccc;
+}
+
+.toolbar button {
+height: 35px;
+padding: 0 20px;
+background: #11153b;
+color: white;
+border: none;
+cursor: pointer;
+}
+
+/* banner */
+.banner {
+height: 380px;
+background: #dff0ff;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 30px;
+}
+
+.banner-left {
+width: 45%;
+height: 280px;
+background: #bcdcff;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+}
+
+.banner-right {
+width: 45%;
+}
+
+.banner-right .sale-text {
+color: #d08a2d;
+font-size: 14px;
+margin-bottom: 10px;
+}
+
+.banner-right h1 {
+font-size: 42px;
+margin-bottom: 15px;
+color: #111;
+}
+
+.banner-right p {
+margin-bottom: 20px;
+color: #333;
+}
+
+.banner-right button {
+padding: 12px 24px;
+background: #f0a040;
+border: none;
+color: white;
+font-weight: bold;
+cursor: pointer;
+}
+
+/* footer */
+.footer {
+height: 60px;
+border-top: 1px solid #ddd;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #666;
+}
+ </style>
+</head>
+<body>
+ <div class="wrapper">
+
+ <div class="topbar">
+ <div class="topbar-left">bookstore.com</div>
+ <div class="topbar-right">
+ <span>f</span>
+ <span>t</span>
+ <span>in</span>
+ <span>Đăng nhập</span>
+ </div>
+ </div>
+
+ <div class="header">
+ <div class="logo">LOGO</div>
+
+ <div class="menu">
+ <a href="#">TRANG CHỦ</a>
+ <a href="#">CỬA HÀNG</a>
+ <a href="#">TRANG</a>
+ <a href="#">BÀI VIẾT</a>
+ <a href="#">LIÊN HỆ</a>
+ </div>
+
+ <div class="header-right">
+ <span>Giỏ hàng</span>
+ <span>Hotline: 001234567</span>
+ </div>
+ </div>
+
+ <div class="main">
+ <div class="sidebar">
+ <div class="sidebar-title">Sản Phẩm</div>
+ <ul>
+ <li>Văn học</li>
+ <li>Kinh tế</li>
+ <li>Âm nhạc</li>
+ <li>Công nghệ</li>
+ <li>Kỹ năng sống</li>
+ <li>Sức khỏe</li>
+ <li>Thiếu nhi</li>
+ <li>Tiểu sử</li>
+ <li>Tạp chí</li>
+ <li>Ngoại ngữ</li>
+ <li>Giáo trình</li>
+ </ul>
+ </div>
+
+ <div class="content">
+ <div class="toolbar">
+ <span>Danh mục</span>
+ <input type="text" placeholder="Tìm kiếm...">
+ <button>TÌM KIẾM</button>
+ </div>
+
+ <div class="banner">
+ <div class="banner-left">
+ HÌNH ẢNH SÁCH
+ </div>
+ <div class="banner-right">
+ <p class="sale-text">BOOK STORE</p>
+ <h1>KHUYẾN MÃI!<br>THẾ GIỚI SÁCH</h1>
+ <p>Giảm giá đến 50% cho nhiều đầu sách hay</p>
+ <button>MUA NGAY</button>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class="footer">
+ Footer
+ </div>
+
+ </div>
+</body>
+</html>
