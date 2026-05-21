@@ -1,0 +1,7 @@
+Link Drive
+	https://drive.google.com/drive/folders/1EubJxBcx5-yiuofHdsCAvU-cmbSaqfs-?usp=drive_link
+
+Copy Extensions VS Code
+	Copy .vscode.zip vào C:\Users\Administrator => Giải nén tại chỗ (đè lên thư mục hiện tại)
+
+
